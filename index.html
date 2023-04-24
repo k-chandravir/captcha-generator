@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Captcha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="captcha.css" />
+  </head>
+  <body onload="captchaGenerator()">
+    <div class="wrapper">
+      <div class="container">
+        <div class="generator">
+            <!-- div element where the captcha is generated -->
+            <div class="captcha" id="captcha-generated"></div>
+            <!-- refersh button to regenrate captcha -->
+            <div class="refresh" onclick="captchaGenerator()">
+                <img src="reload.jpg" alt="reload">
+            </div>
+        </div>
+        <div class="confirmation">
+            <input type="text" id="captcha-input">
+            <button onclick="compareCaptcha()">Submit</button>
+        </div>
+        <div class="result" id="result">
+            Here's the result
+        </div>
+      </div>
+    </div>
+
+    <script src="captcha.js"></script>
+  </body>
+</html>
